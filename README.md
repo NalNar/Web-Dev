@@ -32,6 +32,4 @@ I’m documenting my progress and projects as I go, so this repo will grow with 
 - Store and manage data with **MongoDB**.  
 - Deploy projects to platforms like **Heroku**, **Netlify**, or **Vercel**.  
 
----
 
-## 📂 Repository Structure
