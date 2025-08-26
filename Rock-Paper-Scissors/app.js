@@ -1,5 +1,5 @@
-const computerChoice = document.getElementById('computer-choice');
-const yourChoice = document.getElementById('your-choice');
+const computerChoice = document.getElementById('computer choice');
+const yourChoice = document.getElementById('your choice');
 const resultDisplay = document.getElementById('results');
 const possibleChoices = document.querySelectorAll('button');
 let userChoice;
