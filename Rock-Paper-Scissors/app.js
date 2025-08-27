@@ -1,13 +1,13 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const computerChoice = document.getElementById('computerChoice');
-    const yourChoice = document.getElementById('yourChoice');
+    const computerChoiceDisplay = document.getElementById('computer-choice');
+    const yourChoiceDisplay = document.getElementById('user-choice');
     const resultDisplay = document.getElementById('results');
     const possibleChoices = document.querySelectorAll('button');
     let userChoice;
 
     possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
         userChoice = e.target.id;
-        yourChoice.innerHTML = userChoice;
+        yourChoiceDisplay.innerHTML = userChoice;
+        generateComputerChoice();
     }));
 
     function generateComputerChoice() {
