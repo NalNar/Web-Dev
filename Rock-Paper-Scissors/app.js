@@ -1,53 +1,45 @@
-    const computerChoiceDisplay = document.getElementById('computer-choice');
-    const yourChoiceDisplay = document.getElementById('user-choice');
-    const resultDisplay = document.getElementById('results');
-    const possibleChoices = document.querySelectorAll('button');
-    let userChoice;
-    let computerChoice;
-    let result;
+const computerChoiceDisplay = document.getElementById('computer-choice');
+const yourChoiceDisplay = document.getElementById('user-choice');
+const resultDisplay = document.getElementById('results');
+const possibleChoices = document.querySelectorAll('button');
+let userChoice;
+let computerChoice;
+let result;
 
-    possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
-        userChoice = e.target.id;
-        yourChoiceDisplay.innerHTML = userChoice;
-        generateComputerChoice();
-        getResult();
-    }));
+possibleChoices.forEach(possibleChoice =>
+  possibleChoice.addEventListener('click', (e) => {
+    userChoice = e.target.id;
+    yourChoiceDisplay.innerHTML = userChoice;
+    generateComputerChoice();
+    getResult();
+  })
+);
 
-    function generateComputerChoice() {
-        const randomNumber = Math.floor(Math.random() * possibleChoices.length);
-        if (randomNumber === 1){
-            compueerChoice = 'rock';
-        }
-        if (randomNumber === 2){
-            compueerChoice = 'paper';
-        }
-        if (randomNumber === 3){
-            computerChoice = 'scissors';
-        }
-        computerChoiceDisplay.innerHTML = computerChoice;
-    }
-    function getResult(){
-        if(computerChoice === userChoice){
-            result = 'its a draw!';
-        }
-        if(computerChoice === 'rock' && userChoice === 'paper'){
-            result = 'you win!';
-        }
-        if(computerChoice === 'rock' && userChoice === 'scissors'){
-            result = 'you lose!';
-        }
-        if(computerChoice === 'paper' && userChoice === 'scissors'){
-            result = 'you win!';
-        }
-        if(computerChoice === 'paper' && userChoice === 'rock'){
-            result = 'you lose!';
-        }
-        if(computerChoice === 'scissors' && userChoice === 'rock'){
-            result = 'you win!';
-        }
-        if(computerChoice === 'scissors' && userChoice === 'paper'){
-            result = 'you lose!';
-        }
-        resultDisplay.innerHTML = result;
+function generateComputerChoice() {
+  const randomNumber = Math.floor(Math.random() * 3); // 0,1,2
+  if (randomNumber === 0) {
+    computerChoice = 'rock';
+  }
+  if (randomNumber === 1) {
+    computerChoice = 'paper';
+  }
+  if (randomNumber === 2) {
+    computerChoice = 'scissors';
+  }
+  computerChoiceDisplay.innerHTML = computerChoice;
+}
 
-    }
+function getResult() {
+  if (computerChoice === userChoice) {
+    result = "It's a draw!";
+  } else if (
+    (computerChoice === 'rock' && userChoice === 'paper') ||
+    (computerChoice === 'paper' && userChoice === 'scissors') ||
+    (computerChoice === 'scissors' && userChoice === 'rock')
+  ) {
+    result = 'You win!';
+  } else {
+    result = 'You lose!';
+  }
+  resultDisplay.innerHTML = result;
+}
