@@ -2,9 +2,20 @@ const computerChoiceDisplay = document.getElementById('computer-choice');
 const yourChoiceDisplay = document.getElementById('user-choice');
 const resultDisplay = document.getElementById('results');
 const possibleChoices = document.querySelectorAll('button');
+
+// Scoreboard elements
+const userScoreDisplay = document.getElementById('user-score');
+const computerScoreDisplay = document.getElementById('computer-score');
+const drawScoreDisplay = document.getElementById('draw-score');
+
 let userChoice;
 let computerChoice;
 let result;
+
+// Counters
+let userScore = 0;
+let computerScore = 0;
+let drawScore = 0;
 
 const emojiMap = {
   rock: "✊",
@@ -31,6 +42,7 @@ function generateComputerChoice() {
 function getResult() {
   if (computerChoice === userChoice) {
     result = "It's a draw! 🤝";
+    drawScore++;
   } else {
     const winCases = {
       rock: "scissors",
@@ -40,9 +52,17 @@ function getResult() {
 
     if (winCases[userChoice] === computerChoice) {
       result = "You win! 🎉";
+      userScore++;
     } else {
       result = "You lose! 😢";
+      computerScore++;
     }
   }
+
   resultDisplay.innerHTML = result;
+
+  // Update scoreboard
+  userScoreDisplay.innerHTML = userScore;
+  computerScoreDisplay.innerHTML = computerScore;
+  drawScoreDisplay.innerHTML = drawScore;
 }
