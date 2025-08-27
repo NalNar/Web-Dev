@@ -1,20 +1,35 @@
-<!DOCTYPE HTML>
-<html lang = "en" dir = "ltr">
-    <head>
-        <meta charset="utf-8">
-        <title> Rock Paper Scissors </title>
-    </head>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Rock Paper Scissors</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    h2 span {
+      margin-left: 10px;
+      color: darkblue;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Computer Choice: <span id="computer-choice"></span></h2>
+  <h2>Your Choice: <span id="user-choice"></span></h2>
+  <h2>Result: <span id="results"></span></h2>
 
-    <body> 
-        <h2>Computer Choice:<span id="computer-choice"></span></h2>
-        <h2>Your Choice:<span id="your-choice"></span></h2>
-        <h2>Result:<span id="results"></span></h2>
+  <button id="rock">Rock</button>
+  <button id="paper">Paper</button>
+  <button id="scissors">Scissors</button>
 
-        <button id="rock">rock</button>
-        <button id="paper">paper</button>
-        <button id="scissors">scissors</button>
-
-        <script src="app.js" charset="utf-8"></script>    
-
-    </body>
+  <script src="app.js" charset="utf-8"></script>
+</body>
 </html>
