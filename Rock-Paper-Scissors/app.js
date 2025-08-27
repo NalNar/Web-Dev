@@ -6,15 +6,14 @@ let userChoice;
 let computerChoice;
 let result;
 
-// Map choices to emojis
 const emojiMap = {
   rock: "✊",
   paper: "✋",
   scissors: "✌️"
 };
 
-possibleChoices.forEach(possibleChoice =>
-  possibleChoice.addEventListener('click', (e) => {
+possibleChoices.forEach(choice =>
+  choice.addEventListener('click', (e) => {
     userChoice = e.target.id;
     yourChoiceDisplay.innerHTML = `${userChoice} ${emojiMap[userChoice]}`;
     generateComputerChoice();
@@ -32,14 +31,18 @@ function generateComputerChoice() {
 function getResult() {
   if (computerChoice === userChoice) {
     result = "It's a draw! 🤝";
-  } else if (
-    (computerChoice === 'rock' && userChoice === 'paper') ||
-    (computerChoice === 'paper' && userChoice === 'scissors') ||
-    (computerChoice === 'scissors' && userChoice === 'rock')
-  ) {
-    result = "You win! 🎉";
   } else {
-    result = "You lose! 😢";
+    const winCases = {
+      rock: "scissors",
+      paper: "rock",
+      scissors: "paper"
+    };
+
+    if (winCases[userChoice] === computerChoice) {
+      result = "You win! 🎉";
+    } else {
+      result = "You lose! 😢";
+    }
   }
   resultDisplay.innerHTML = result;
 }
