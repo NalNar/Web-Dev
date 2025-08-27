@@ -64,7 +64,7 @@ function getResult() {
   console.log("Scores → User:", userScore, "Computer:", computerScore, "Draws:", drawScore);
 
   // Update scoreboard
-  userScoreDisplay.innerHTML = userScore;
-  computerScoreDisplay.innerHTML = computerScore;
-  drawScoreDisplay.innerHTML = drawScore;
+  userScoreDisplay.innerHTML = user-score;
+  computerScoreDisplay.innerHTML = computer-score;
+  drawScoreDisplay.innerHTML = draw-score;
 }
