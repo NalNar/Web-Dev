@@ -7,6 +7,11 @@ const possibleChoices = document.querySelectorAll('button');
 const userScoreDisplay = document.getElementById('user-score');
 const computerScoreDisplay = document.getElementById('computer-score');
 const drawScoreDisplay = document.getElementById('draw-score');
+console.log(
+  document.getElementById('user-score'),
+  document.getElementById('computer-score'),
+  document.getElementById('draw-score')
+);
 
 let userChoice;
 let computerChoice;
@@ -64,7 +69,7 @@ function getResult() {
   console.log("Scores → User:", userScore, "Computer:", computerScore, "Draws:", drawScore);
 
   // Update scoreboard
-  userScoreDisplay.innerHTML = user-score;
-  computerScoreDisplay.innerHTML = computer-score;
-  drawScoreDisplay.innerHTML = draw-score;
+  userScoreDisplay.innerHTML = userScore;
+  computerScoreDisplay.innerHTML = computerScore;
+  drawScoreDisplay.innerHTML = drawScore;
 }
