@@ -14,4 +14,3 @@
         const randomNumber = Math.floor(Math.random() * possibleChoices.length);
         console.log(randomNumber);
     }
-};
