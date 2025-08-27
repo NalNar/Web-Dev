@@ -12,7 +12,6 @@ let userChoice;
 let computerChoice;
 let result;
 
-// Counters
 let userScore = 0;
 let computerScore = 0;
 let drawScore = 0;
@@ -60,6 +59,9 @@ function getResult() {
   }
 
   resultDisplay.innerHTML = result;
+
+  // Debug logs
+  console.log("Scores → User:", userScore, "Computer:", computerScore, "Draws:", drawScore);
 
   // Update scoreboard
   userScoreDisplay.innerHTML = userScore;
