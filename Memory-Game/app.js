@@ -48,5 +48,5 @@ const cardArray =[
         img: 'images/pizza'
     }
 ];
-
+cardArray.sort(()=> 0.5 - Math.random());
 console.log(cardArray);
