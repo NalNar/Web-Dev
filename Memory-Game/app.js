@@ -22,8 +22,8 @@ const cardArray =[
     {
         name:'pizza',
         img: 'images/pizza'
-    }
-{
+    },
+    {
         name: 'fries',
         img:'images/fries.png'
     },
