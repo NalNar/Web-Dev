@@ -13,15 +13,15 @@ const cardArray =[
     },
     {
         name:'ice-cream',
-        img: 'images/ice-cream'
+        img: 'images/ice-cream.png'
     },
     {
         name:'milkshake',
-        img: 'images/milkshake'
+        img: 'images/milkshake.png'
     },
     {
         name:'pizza',
-        img: 'images/pizza'
+        img: 'images/pizza.png'
     },
     {
         name: 'fries',
@@ -37,15 +37,15 @@ const cardArray =[
     },
     {
         name:'ice-cream',
-        img: 'images/ice-cream'
+        img: 'images/ice-cream.png'
     },
     {
         name:'milkshake',
-        img: 'images/milkshake'
+        img: 'images/milkshake.png'
     },
     {
         name:'pizza',
-        img: 'images/pizza'
+        img: 'images/pizza.png'
     }
 ];
 cardArray.sort(()=> 0.5 - Math.random());
